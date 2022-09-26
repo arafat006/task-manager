@@ -1,0 +1,66 @@
+﻿
+    /*[HttpPost]
+    public IActionResult GenerateSeed()
+    {
+      var userId = 1;
+      var taskTrackerId = 1;
+      var taskKeeperId = 1;
+
+      var faker = new Faker("en");
+      var random = new Randomizer();
+
+      var userCount = 10;
+      var taskTrackerCount = 5;
+      var taskKeeperCount = 8;  
+
+      var taskKeeperSeeder = new Faker<TaskKeeper>().RuleFor(taskTracker => taskTracker.Id, faker => taskKeeperId++)
+                                                    .RuleFor(taskTracker => taskTracker.Title, faker => faker.Lorem.Sentence(random.Number(1, 2)))
+                                                    .RuleFor(taskTracker => taskTracker.Deadline, DateTime.UtcNow.AddDays(random.Number(1, 7)))
+                                                    .RuleFor(taskTracker => taskTracker.State, faker => random.Number(1, 4));
+
+      var taskTrackerSeeder = new Faker<TaskTracker>().RuleFor(taskTracker => taskTracker.Id, faker => taskTrackerId++)
+                                                      .RuleFor(taskTracker => taskTracker.Title, faker => faker.Lorem.Sentence(random.Number(1, 2)))
+                                                      .RuleFor(taskTracker => taskTracker.Description, faker => faker.Lorem.Sentence(random.Number(5, 10)))
+                                                      .RuleFor(taskTracker => taskTracker.CreationDate, faker => DateTime.UtcNow)
+                                                      .RuleFor(taskTracker => taskTracker.Deadline, faker => DateTime.UtcNow.AddDays(7))
+                                                      .RuleFor(taskTracker => taskTracker.LastUpdatedDate, faker => DateTime.UtcNow)
+                                                      .RuleFor(taskTracker => taskTracker.TaskKeepers, faker => taskKeeperSeeder.Generate(random.Number(4,taskKeeperCount)));
+
+      var userSeeder = new Faker<User>().RuleFor(user => user.Id, faker => userId++)
+                                        .RuleFor(user => user.Name, faker => faker.Name.FullName())
+                                        .RuleFor(user => user.Email, (faker, user) => faker.Internet.Email(user.Name))
+                                        .RuleFor(user => user.Password, faker => faker.Internet.Password(128))
+                                        .RuleFor(user => user.CreatedDate, faker => DateTime.UtcNow)
+                                        .RuleFor(user => user.TaskTrackers, faker => taskTrackerSeeder.Generate(random.Number(1, taskTrackerCount)));
+
+      var seed = userSeeder.Generate(userCount);
+
+      seed.ToList()
+          .ForEach(user => user.TaskTrackers
+            .ToList()
+            .ForEach(taskTracker => taskTracker.CreatedBy = user.Id));
+
+      seed.ToList()
+          .ForEach(user => user.TaskTrackers
+            .ToList()
+            .ForEach(taskTracker => taskTracker.TaskKeepers
+              .ToList()
+              .ForEach(taskKeeper => taskKeeper.TaskTrackerId = taskTracker.Id)));
+
+      *//*var userSeedModel = new UserSeedModel()
+      {
+        Id = seed.First().Id,
+        Name = seed.First().Name,
+        Email = seed.First().Email,
+        Password = seed.First().Password,
+        CreatedDate = seed.First().CreatedDate
+      };*//*
+
+      //_taskPlannerDbContext.User.AddAsync(userSeedModel);
+
+      *//*_taskPlannerDbContext.User.AddAsync(seed.First());
+      _taskPlannerDbContext.SaveChanges();*//*
+
+
+      return Ok(seed);
+    }*/

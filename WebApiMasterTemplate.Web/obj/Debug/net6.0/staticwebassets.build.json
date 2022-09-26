@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "/MPcus7AQfqDnyqB2zEO9Ha0pjJ2a7oPK6Z8NGoC3Vw=",
+  "Source": "WebApiMasterTemplate.Web",
+  "BasePath": "_content/WebApiMasterTemplate.Web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

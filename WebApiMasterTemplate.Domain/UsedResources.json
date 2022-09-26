@@ -1,0 +1,18 @@
+﻿[
+  {
+    "CodeBase info": {
+      "Code Indent Space": 2
+    }
+  },
+  {
+    "Packages": {
+      "Microsoft.EntityFrameworkCore": "6.0.5",
+      "Microsoft.EntityFrameworkCore.SqlServer": "6.0.5",
+      "Microsoft.EntityFrameworkCore.Tools": "6.0.5",
+      "Microsoft.EntityFrameworkCore.Design": "6.0.5",
+      "Bogus": "34.0.2",
+      "AutoMapper": "11.0.1",
+      "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0"
+    }
+  }
+]

@@ -1,0 +1,6 @@
+﻿Database Migration:
+	Enable-Migration [To enable migration command]
+	Add-Migration "comment" [DbContext and Register files are in same project]
+	Add-Migration "comment" -Project ProjectName.Domain [DbContext and Register files are in different project]
+	[Add-Migration "Initial" -Project WebApiMasterTemplate.Domain - Example for this project]
+	Update-Database [To update Database from the migration]
